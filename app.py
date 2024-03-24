@@ -6,6 +6,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain_community.chat_models import ChatOllama
 from langchain_groq import ChatGroq
 from langchain.memory import ChatMessageHistory, ConversationBufferMemory
+from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 import chainlit as cl
 import os
 
@@ -116,9 +117,10 @@ async def on_chat_start():
 
     # Create a Chroma vector store
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    embed_model = FastEmbedEmbeddings(model_name="BAAI/bge-base-en-v1.5")
     #embeddings = OllamaEmbeddings(model="llama2:7b")
     docsearch = await cl.make_async(Chroma.from_texts)(
-        texts, embeddings, metadatas=metadatas
+        texts, embed_model, metadatas=metadatas
     )
     
     # Initialize message history for conversation
