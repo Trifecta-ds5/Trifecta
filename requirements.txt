@@ -8,3 +8,4 @@ langchain-groq
 ollama
 apify_client
 fastembed
+sqlite3 >= 3.35.0
