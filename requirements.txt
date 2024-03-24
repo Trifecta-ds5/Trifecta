@@ -2,7 +2,7 @@ chainlit
 langchain
 langchain_community
 PyPDF2
-chromadb
+chromadb==0.3.29
 groq
 langchain-groq
 ollama
