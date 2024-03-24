@@ -8,4 +8,4 @@ langchain-groq
 ollama
 apify_client
 fastembed
-sqlite3
+pysqlite3 
