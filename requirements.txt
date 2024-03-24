@@ -7,3 +7,4 @@ groq
 langchain-groq
 ollama
 apify_client
+fastembed
