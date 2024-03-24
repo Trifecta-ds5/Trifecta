@@ -16,7 +16,7 @@ import os
 from apify_client import ApifyClient
 
 # Initialize the ApifyClient with your API token
-client = ApifyClient("apify_api_TBuXzkxhEamrvcvzhjhg22dcH02tjk2zlr7a")
+client = ApifyClient("apify_api_iu9FkhzU7Dseb2ITEgvI9512kJb6Mx1PBO83")
 
 # Prepare the Actor input
 
